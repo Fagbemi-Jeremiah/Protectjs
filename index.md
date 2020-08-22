@@ -1,4 +1,4 @@
-## Welcome to Protectjs
+# Welcome to Protectjs
 
 Protectjs -- Made by Fagbemi Jeremiah
 This file is used to prevent theft of code
@@ -7,7 +7,7 @@ NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXC
  
 We will try our best to always update our code so that you can get the best experience
 
-Just add this to your code and start using Protectjs on your site
+#### Just add this to your code and start using Protectjs on your site
 
     <script type="text/javascript" src="path/to/protectjs.js"></script>
     
