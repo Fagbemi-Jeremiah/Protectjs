@@ -1,3 +1,4 @@
+<script type="text/javascript" src="../protectjs.js"></script>
 # Welcome to Protectjs
 
 Protectjs -- Made by Fagbemi Jeremiah
