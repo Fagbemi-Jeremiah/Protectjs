@@ -13,3 +13,4 @@ We will try our best to always update our code so that you can get the best expe
     <script type="text/javascript" src="path/to/protectjs.js"></script>
     
   Note:For Beginners path/to/ means the loaction of your script
+#### To see how Protectjs works try checking the source code of this site
