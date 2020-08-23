@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../protectjs.js"></script>
+<script type="text/javascript" src="https://github.com/Fagbemi-Jeremiah/Protectjs/blob/master/protectjs.js"></script>
 # Welcome to Protectjs
 
 Protectjs -- Made by Fagbemi Jeremiah
