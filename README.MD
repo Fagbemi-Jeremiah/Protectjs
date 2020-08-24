@@ -12,3 +12,4 @@ Just add this to your code and start using Protectjs on your site
     <script type="text/javascript" src="path/to/protectjs.js"></script>
     
   Note:For Beginners path/to/ means the loaction of your script
+DEMO AT https://fagbemi-jeremiah.github.io/Protectjs/
