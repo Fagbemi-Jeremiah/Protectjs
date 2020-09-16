@@ -6,7 +6,7 @@ Please do not edit anything in this file and don't claim this file as yours
 
 NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXCEPT IT CONTAINS PERSONAL INFO) BECUASE THE WEB WOULDN'T MOVE FORWARD IF EVERY ONE WERE HIDING WHAT THEY KNOW.
 */
-var node = '<div style="visibility: hidden; opacity:0; display:none;position:absolute;" id="bhjbhjkjjkokjjkkjjkj"></div>';
+var node = '<div style="visibility: hidden; opacity:0;width:100%;position:absolute;" id="bhjbhjkjjkokjjkkjjkj"></div>';
 document.getElementsByTagName("body")[0].innerHTML += node;
 document.addEventListener('contextmenu', event => event.preventDefault());
 var ua = navigator.userAgent.toLowerCase();
@@ -213,7 +213,7 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name, "", -1)
 }
-  while(document.getElementById("bhjbhjkjjkokjjkkjjkj").offsetWidth !== screen.width){
+  if(document.getElementById("bhjbhjkjjkokjjkkjjkj").offsetWidth !== screen.width){
         rmbody();
    document.getElementsByTagName("body")[0].innerHTML == "";
         }
