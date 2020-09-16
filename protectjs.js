@@ -6,6 +6,8 @@ Please do not edit anything in this file and don't claim this file as yours
 
 NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXCEPT IT CONTAINS PERSONAL INFO) BECUASE THE WEB WOULDN'T MOVE FORWARD IF EVERY ONE WERE HIDING WHAT THEY KNOW.
 */
+var node = '<div style="visibility: hidden; opacity:0; display:none;position:absolute;" id="bhjbhjkjjkokjjkkjjkj"></div>';
+document.getElementsByTagName("body")[0].innerHTML += node;
 document.addEventListener('contextmenu', event => event.preventDefault());
 var ua = navigator.userAgent.toLowerCase();
 var dub = window;
@@ -92,7 +94,6 @@ document.onmousedown = dc;
 document.addEventListener("keydown", function(e) {
     if (e.keyCode >= 112 && e.keyCode <= 123 || (window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && (e.keyCode == 99 || e.keyCode == 67 || e.keyCode == 117 || e.keyCode == 85 || e.keyCode == 115 || e.keyCode == 83 || e.keyCode == 105 || e.keyCode == 73 || e.keyCode == 110 || e.keyCode == 78 || e.keyCode == 107 || e.keyCode == 75 || e.keyCode == 101 || e.keyCode == 69 || e.keyCode == 109 || e.keyCode == 77 || e.keyCode == 106 || e.keyCode == 74)) {
         e.preventDefault();
-        stt("You found Easter Egg #10!")
     }
 }, false);
 var deb = 0;
@@ -123,10 +124,7 @@ function rmbody() {
     if (readCookie(utm) == 2) return;
     al("rm2");
     createCookie(utm, 2, 365 * 10);
-    var node = '<a href="'+window.location.href+'" target="_blank" style="visibility: hidden; opacity:0; display:none;" id="gggggghbvgyuhbghuhhijhuijhuihihihijhihuiuhih">open new tab<a>"';
-document.getElementsByTagName("body")[0].innerHTML += node;
-document.getElementById('gggggghbvgyuhbghuhhijhuijhuihihihijhihuiuhih').click();
-   window.close();
+document.getElementsByTagName("body")[0].innerHTML == "";
 }
 
 function noconsole3() {
@@ -215,4 +213,8 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name, "", -1)
 }
+  while(document.getElementById("bhjbhjkjjkokjjkkjjkj").offsetWidth !== screen.width){
+        rmbody();
+   document.getElementsByTagName("body")[0].innerHTML == "";
+        }
     //-->
