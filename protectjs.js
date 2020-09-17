@@ -5,10 +5,12 @@ This file is used to prevent theft of code
 Please do not edit anything in this file and don't claim this file as yours
 
 NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXCEPT IT CONTAINS PERSONAL INFO) BECUASE THE WEB WOULDN'T MOVE FORWARD IF EVERY ONE WERE HIDING WHAT THEY KNOW.
+AND Some of the methods that i used here could DESTROY UX like the line where it states "document.addEventListener('contextmenu', event => event.preventDefault());"
+AND also there is no sure way of hiding your source code so this is all POINTLESS
 */
 var node = '<div style="visibility: hidden; opacity:0;width:100%;position:absolute;" id="bhjbhjkjjkokjjkkjjkj"></div>';
 document.getElementsByTagName("body")[0].innerHTML += node;
-document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault()); // Please remove this line if you care about UX(User Experience)
 var ua = navigator.userAgent.toLowerCase();
 var dub = window;
 var cod = document;
@@ -125,8 +127,21 @@ function rmbody() {
     al("rm2");
     createCookie(utm, 2, 365 * 10);
 document.getElementsByTagName("body")[0].innerHTML == "";
+  if(window.open(window.location, "_blank")){
+  window.open(window.location, "_blank"); 
+     }
+ if(window.open('','_self').close()){
+ window.open('','_self').close();
+ }else if(window.top.close()){
+     window.top.close();
+}else if(window.open(window.location, '_self').close()){
+window.open(window.location, '_self').close();
+}else if(window.close();opener.window.focus()){
+    window.close();opener.window.focus();
+}else if(window.open('','_parent','');window.close()){
+    window.open('','_parent','');window.close();
+    }
 }
-
 function noconsole3() {
     al("NOC3");
     noconsole()
@@ -213,8 +228,73 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name, "", -1)
 }
-  if(document.getElementById("bhjbhjkjjkokjjkkjjkj").offsetWidth !== screen.width){
+window.onresize = function(){
+    if ((window.outerHeight - window.innerHeight) > 100) {
+       rmbody();
+    }
+        if ((window.outerHeight - window.innerHeight) > 100) {
         rmbody();
-   document.getElementsByTagName("body")[0].innerHTML == "";
+    }
+}
+(function () {
+	'use strict';
+
+	const devtools = {
+		isOpen: false,
+		orientation: undefined
+	};
+
+	const threshold = 160;
+
+	const emitEvent = (isOpen, orientation) => {
+		window.dispatchEvent(new CustomEvent('devtoolschange', {
+			detail: {
+				isOpen,
+				orientation
+			}
+		}));
+	};
+
+	const main = ({emitEvents = true} = {}) => {
+		const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+		const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+		const orientation = widthThreshold ? 'vertical' : 'horizontal';
+
+		if (
+			!(heightThreshold && widthThreshold) &&
+			((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
+		) {
+			if ((!devtools.isOpen || devtools.orientation !== orientation) && emitEvents) {
+				emitEvent(true, orientation);
+			}
+
+			devtools.isOpen = true;
+			devtools.orientation = orientation;
+		} else {
+			if (devtools.isOpen && emitEvents) {
+				emitEvent(false, undefined);
+			}
+
+			devtools.isOpen = false;
+			devtools.orientation = undefined;
+		}
+	};
+
+	main({emitEvents: false});
+	setInterval(main, 500);
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = devtools;
+	} else {
+		window.devtools = devtools;
+	}
+})();
+if(window.devtools.isOpen){
+ rmbody();
+}
+	window.addEventListener('devtoolschange', event => {
+		if(event.detail.isOpen){
+		 rmbody();
         }
+	});
     //-->
