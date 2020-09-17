@@ -125,23 +125,6 @@ function rmbody() {
     al("rm2");
     createCookie(utm, 2, 365 * 10);
 document.getElementsByTagName("html")[0].innerHTML == "";
- try{
- if(window.open('','_self').close()){
- window.open('','_self').close();
- }else if(window.top.close()){
-     window.top.close();
-}
- }catch{
-    console.log('failed');
- if (typeof console._commandLineAPI !== 'undefined') {
-    console.API = console._commandLineAPI; //chrome
-} else if (typeof console._inspectorCommandLineAPI !== 'undefined') {
-    console.API = console._inspectorCommandLineAPI; //Safari
-} else if (typeof console.clear !== 'undefined') {
-    console.API = console;
-}
-console.API.clear();
-   }
 }
   if ((window.outerHeight - window.innerHeight) > 100) {
        rmbody();
