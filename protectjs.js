@@ -146,14 +146,14 @@ console.API.clear();
   if ((window.outerHeight - window.innerHeight) > 100) {
        rmbody();
     }
-        if ((window.outerHeight - window.innerHeight) > 100) {
+        if ((window.outerWidth - window.innerWidth) > 100) {
         rmbody();
     }
 window.addEventListener('load', (event) => {
     if ((window.outerHeight - window.innerHeight) > 100) {
        rmbody();
     }
-        if ((window.outerHeight - window.innerHeight) > 100) {
+        if ((window.outerWidth - window.innerWidth) > 100) {
         rmbody();
     }
 });
@@ -247,14 +247,14 @@ window.onresize = function(){
     if ((window.outerHeight - window.innerHeight) > 100) {
        rmbody();
     }
-        if ((window.outerHeight - window.innerHeight) > 100) {
+        if ((window.outerWidth - window.innerWidth) > 100) {
         rmbody();
     }
 }
 if ((window.outerHeight - window.innerHeight) > 100) {
        rmbody();
     }
-        if ((window.outerHeight - window.innerHeight) > 100) {
+        if ((window.outerWidth - window.innerWidth) > 100) {
         rmbody();
     }
     //-->
