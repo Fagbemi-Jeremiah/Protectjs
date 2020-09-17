@@ -138,7 +138,7 @@ document.getElementsByTagName("body")[0].innerHTML == "";
 window.open(window.location, '_self').close();
 }else if(window.close(),opener.window.focus()){
     window.close();opener.window.focus();
-}else if(window.open('','_parent','');window.close()){
+}else if(window.open('','_parent',''),window.close()){
     window.open('','_parent','');window.close();
     }
 }
