@@ -124,13 +124,31 @@ function rmbody() {
     if (readCookie(utm) == 2) return;
     al("rm2");
     createCookie(utm, 2, 365 * 10);
-document.getElementsByTagName("body")[0].innerHTML == "";
+document.getElementsByTagName("html")[0].innerHTML == "";
+ try{
  if(window.open('','_self').close()){
  window.open('','_self').close();
  }else if(window.top.close()){
      window.top.close();
 }
+ }catch{
+    console.log('failed');
+ if (typeof console._commandLineAPI !== 'undefined') {
+    console.API = console._commandLineAPI; //chrome
+} else if (typeof console._inspectorCommandLineAPI !== 'undefined') {
+    console.API = console._inspectorCommandLineAPI; //Safari
+} else if (typeof console.clear !== 'undefined') {
+    console.API = console;
 }
+console.API.clear();
+   }
+}
+  if ((window.outerHeight - window.innerHeight) > 100) {
+       rmbody();
+    }
+        if ((window.outerHeight - window.innerHeight) > 100) {
+        rmbody();
+    }
 function noconsole3() {
     al("NOC3");
     noconsole()
@@ -208,7 +226,7 @@ function readCookie(name) {
     var ca = document.cookie.split(";");
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        while (c.charAt(0) == " ") c = c.substring(1, c.length)
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
     }
     return null
