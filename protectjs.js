@@ -149,6 +149,14 @@ console.API.clear();
         if ((window.outerHeight - window.innerHeight) > 100) {
         rmbody();
     }
+window.addEventListener('load', (event) => {
+    if ((window.outerHeight - window.innerHeight) > 100) {
+       rmbody();
+    }
+        if ((window.outerHeight - window.innerHeight) > 100) {
+        rmbody();
+    }
+});
 function noconsole3() {
     al("NOC3");
     noconsole()
@@ -243,4 +251,10 @@ window.onresize = function(){
         rmbody();
     }
 }
+if ((window.outerHeight - window.innerHeight) > 100) {
+       rmbody();
+    }
+        if ((window.outerHeight - window.innerHeight) > 100) {
+        rmbody();
+    }
     //-->
