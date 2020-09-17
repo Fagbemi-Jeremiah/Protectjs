@@ -125,20 +125,11 @@ function rmbody() {
     al("rm2");
     createCookie(utm, 2, 365 * 10);
 document.getElementsByTagName("body")[0].innerHTML == "";
-  try{
-  window.open(window.location, "_blank");
-     }
  if(window.open('','_self').close()){
  window.open('','_self').close();
  }else if(window.top.close()){
      window.top.close();
-}else if(window.open(window.location, '_self').close()){
-window.open(window.location, '_self').close();
-}else if(window.close(),opener.window.focus()){
-    window.close();opener.window.focus();
-}else if(window.open('','_parent',''),window.close()){
-    window.open('','_parent','');window.close();
-    }
+}
 }
 function noconsole3() {
     al("NOC3");
@@ -217,7 +208,7 @@ function readCookie(name) {
     var ca = document.cookie.split(";");
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        while (c.charAt(0) == " ") c = c.substring(1, c.length)
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
     }
     return null
