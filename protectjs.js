@@ -8,8 +8,6 @@ NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXC
 AND Some of the methods that i used here could DESTROY UX like the line where it states "document.addEventListener('contextmenu', event => event.preventDefault());"
 AND also there is no sure way of hiding your source code so this is all POINTLESS
 */
-var node = '<div style="visibility: hidden; opacity:0;width:100%;position:absolute;" id="bhjbhjkjjkokjjkkjjkj"></div>';
-document.getElementsByTagName("body")[0].innerHTML += node;
 document.addEventListener('contextmenu', event => event.preventDefault()); // Please remove this line if you care about UX(User Experience)
 var ua = navigator.userAgent.toLowerCase();
 var dub = window;
@@ -236,65 +234,4 @@ window.onresize = function(){
         rmbody();
     }
 }
-(function () {
-	'use strict';
-
-	const devtools = {
-		isOpen: false,
-		orientation: undefined
-	};
-
-	const threshold = 160;
-
-	const emitEvent = (isOpen, orientation) => {
-		window.dispatchEvent(new CustomEvent('devtoolschange', {
-			detail: {
-				isOpen,
-				orientation
-			}
-		}));
-	};
-
-	const main = ({emitEvents = true} = {}) => {
-		const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-		const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-		const orientation = widthThreshold ? 'vertical' : 'horizontal';
-
-		if (
-			!(heightThreshold && widthThreshold) &&
-			((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
-		) {
-			if ((!devtools.isOpen || devtools.orientation !== orientation) && emitEvents) {
-				emitEvent(true, orientation);
-			}
-
-			devtools.isOpen = true;
-			devtools.orientation = orientation;
-		} else {
-			if (devtools.isOpen && emitEvents) {
-				emitEvent(false, undefined);
-			}
-
-			devtools.isOpen = false;
-			devtools.orientation = undefined;
-		}
-	};
-
-	main({emitEvents: false});
-	setInterval(main, 500);
-
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = devtools;
-	} else {
-		window.devtools = devtools;
-	}
-})();
-if(window.devtools.isOpen){
- rmbody();
-}
-	window.addEventListener('devtoolschange', event => {
-		if(event.detail.isOpen){
-		 rmbody();
-        }
-	});
     //-->
