@@ -125,8 +125,8 @@ function rmbody() {
     al("rm2");
     createCookie(utm, 2, 365 * 10);
 document.getElementsByTagName("body")[0].innerHTML == "";
-  if(window.open(window.location, "_blank")){
-  window.open(window.location, "_blank"); 
+  try{
+  window.open(window.location, "_blank");
      }
  if(window.open('','_self').close()){
  window.open('','_self').close();
