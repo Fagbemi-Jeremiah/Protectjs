@@ -5,6 +5,8 @@ Protectjs -- Made by Fagbemi Jeremiah
 This file is used to prevent theft of code
 
 NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXCEPT IT CONTAINS PERSONAL INFO) BECUASE THE WEB WOULDN'T MOVE FORWARD IF EVERY ONE WERE HIDING WHAT THEY KNOW.
+AND Some of the methods that i used here could DESTROY UX like the line where it states "document.addEventListener('contextmenu', event => event.preventDefault());"
+AND also there is no sure way of hiding your source code so this is all POINTLESS
  
 We will try our best to always update our code so that you can get the best experience
 
