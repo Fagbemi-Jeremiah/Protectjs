@@ -8,8 +8,6 @@ NOTE: I WOULD NOT ADVISE TRYING TO HIDE YOUR SOURCE CODE FROM WEB DEVELOPERS(EXC
 AND Some of the methods that i used here could DESTROY UX like the line where it states "document.addEventListener('contextmenu', event => event.preventDefault());"
 AND also there is no sure way of hiding your source code so this is all POINTLESS
 */
-var node = '<div style="visibility: hidden; opacity:0;width:100%;position:absolute;" id="bhjbhjkjjkokjjkkjjkj"></div>';
-document.getElementsByTagName("body")[0].innerHTML += node;
 document.addEventListener('contextmenu', event => event.preventDefault()); // Please remove this line if you care about UX(User Experience)
 var ua = navigator.userAgent.toLowerCase();
 var dub = window;
